@@ -44,6 +44,12 @@ export default {
       type: 'string'
     },
     {
+      name: 'subheader',
+      title: 'Subheader',
+      type: 'string',
+      description: 'If there is no subheading on the page changing this will have no effect.',
+    },
+    {
       name: 'textContent',
       title: 'Text Content',
       type: 'array',
