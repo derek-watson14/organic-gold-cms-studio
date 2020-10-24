@@ -13,6 +13,8 @@ import screening from './screening'
 import plotSummary from './plotSummary'
 import plotSummaries from './plotSummaries'
 import page from './page'
+import list from './list'
+import form from './form'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -33,6 +35,8 @@ export default createSchema({
     plotSummary,
     plotSummaries,
     castMember,
-    crewMember
+    crewMember,
+    list,
+    form,
   ])
 })

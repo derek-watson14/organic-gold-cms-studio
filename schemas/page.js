@@ -92,6 +92,18 @@ export default {
         hotspot: true
       }
     },
+    {
+      name: 'lists',
+      title: 'Page lists',
+      type: 'array',
+      of: [{ type: 'list' }],
+    },
+    {
+      name: 'forms',
+      title: 'Forms',
+      type: 'array',
+      of: [{ type: 'form' }]
+    }
   ],
   preview: {
     select: {
