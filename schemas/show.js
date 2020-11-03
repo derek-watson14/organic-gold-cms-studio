@@ -18,6 +18,7 @@ export default {
       type: 'text',
       rows: 2,
       description: 'Short description of the show.',
+      validation: Rule => Rule.max(280)
     },
     {
       name: 'date',
