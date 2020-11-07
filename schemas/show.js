@@ -21,9 +21,23 @@ export default {
       validation: Rule => Rule.max(280)
     },
     {
-      name: 'date',
+      name: 'showDate',
       title: 'Show Date:',
-      type: 'datetime',
+      type: 'date',
+      options: {
+        dateFormat: 'dddd, D MMMM YYYY',
+      }
+    },
+    {
+      name: 'showTime',
+      title: 'Show Time:',
+      description: 'Format time like one of the following examples: 5:15pm, 11:20am',
+      type: 'string',
+      validation: Rule => {
+        return Rule
+          .regex(/\b((1[0-2]|0?[1-9]):([0-5][0-9])([ap][m]))/)
+          .error("Time format must match format in description. (1:10am, 10:55pm)")
+      },
     },
     {
       name: 'bandNames',
