@@ -8,6 +8,7 @@ import page from './page'
 import show from './show'
 import list from './list'
 import form from './form'
+import address from './address'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,5 +25,6 @@ export default createSchema({
     // { type: 'typename' } in other document schemas
     list,
     form,
+    address,
   ])
 })

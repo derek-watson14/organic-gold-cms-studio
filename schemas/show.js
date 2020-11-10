@@ -79,6 +79,11 @@ export default {
           title: 'Link to venue',
           type: 'string',
         },
+        {
+          name: 'address',
+          title: 'Venue address',
+          type: 'address',
+        }
       ]
     },
     {
