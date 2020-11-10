@@ -40,20 +40,46 @@ export default {
       },
     },
     {
-      name: 'bandNames',
+      name: 'bands',
       title: 'Bands playing:',
       type: 'array',
-      of: [{type: 'string'}],
+      of: [
+        {
+          name: 'band',
+          title: 'Band Info:',
+          type: 'object',
+          fields: [
+            {
+              name: 'name',
+              title: 'Band name:',
+              type: 'string',
+            },
+            {
+              name: 'link',
+              title: 'Band webpage link:',
+              type: 'string',
+              description: "The band's website/Spotify/Facebook etc.",
+            },
+          ]
+        }
+      ]
     },
     {
-      name: 'venueName',
-      title: 'Venue name:',
-      type: 'string',
-    },
-    {
-      name: 'venueLink',
-      title: 'Link to venue',
-      type: 'string',
+      name: 'venue',
+      title: 'Venue Info:',
+      type: 'object',
+      fields: [
+        {
+          name: 'name',
+          title: 'Venue name:',
+          type: 'string',
+        },
+        {
+          name: 'link',
+          title: 'Link to venue',
+          type: 'string',
+        },
+      ]
     },
     {
       name: 'image',
