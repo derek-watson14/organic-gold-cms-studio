@@ -24,15 +24,5 @@ export default {
           .error('Please use valid 2-letter state code')
       }
     },
-    {
-      name: 'zip',
-      title: 'Zip code',
-      type: 'string',
-      validation: Rule => {
-        return Rule
-          .regex(/^\d{5}$/)
-          .error('Please input a valid 5-digit zip code.')
-      }
-    }
   ],
 }

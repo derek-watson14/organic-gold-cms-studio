@@ -22,26 +22,30 @@ export default {
       title: 'Page Name',
       type: 'string',
       description: 'Changing will break website. This is how the website identifies the page.',
-      fieldset: 'meta'
+      fieldset: 'meta',
+      validation: Rule => Rule.required(),
     },
     {
       name: 'tabTitle',
       title: 'Tab Title',
       type: 'string',
       description: 'Text that will render on the browser tab.',
-      fieldset: 'meta'
+      fieldset: 'meta',
+      validation: Rule => Rule.required(),
     },
     {
       name: 'metaDescription',
       title: 'SEO Description',
       type: 'string',
       description: 'Description for search result and SEO.',
-      fieldset: 'meta'
+      fieldset: 'meta',
+      validation: Rule => Rule.required(),
     },
     {
       name: 'pageHeader',
       title: 'Page Header',
-      type: 'string'
+      type: 'string',
+      validation: Rule => Rule.required(),
     },
     {
       name: 'subheader',

@@ -11,6 +11,7 @@ export default {
       title: 'Show Name',
       type: 'string',
       description: 'Name of the show to be displayed on page.',
+      validation: Rule => Rule.required(),
     },
     {
       name: 'about',
@@ -18,7 +19,7 @@ export default {
       type: 'text',
       rows: 2,
       description: 'Short description of the show.',
-      validation: Rule => Rule.max(280)
+      validation: Rule => Rule.required().max(280)
     },
     {
       name: 'showDate',
@@ -26,7 +27,8 @@ export default {
       type: 'date',
       options: {
         dateFormat: 'dddd, D MMMM YYYY',
-      }
+      },
+      validation: Rule => Rule.required(),
     },
     {
       name: 'showTime',
@@ -35,6 +37,7 @@ export default {
       type: 'string',
       validation: Rule => {
         return Rule
+          .required()
           .regex(/\b((1[0-2]|0?[1-9]):([0-5][0-9])([ap][m]))/)
           .error("Time format must match format in description. (1:10am, 10:55pm)")
       },
@@ -53,6 +56,7 @@ export default {
               name: 'name',
               title: 'Band name:',
               type: 'string',
+              validation: Rule => Rule.required(),
             },
             {
               name: 'link',
@@ -62,7 +66,7 @@ export default {
             },
           ]
         }
-      ]
+      ],
     },
     {
       name: 'venue',
@@ -73,6 +77,7 @@ export default {
           name: 'name',
           title: 'Venue name:',
           type: 'string',
+          validation: Rule => Rule.required(),
         },
         {
           name: 'link',

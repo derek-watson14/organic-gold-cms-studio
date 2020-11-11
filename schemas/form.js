@@ -7,11 +7,13 @@ export default {
       name: 'formName',
       title: 'Form Name',
       type: 'string',
+      validation: Rule => Rule.required(),
     },
     {
       name: 'formHeader',
       title: 'Form header',
       type: 'string',
+      validation: Rule => Rule.required(),
     },
     {
       name: 'formLabelList',
@@ -25,12 +27,14 @@ export default {
           {
             name: 'fieldName',
             title: 'Field name',
-            type: 'string'
+            type: 'string',
+            validation: Rule => Rule.required(),
           },
           {
             name: 'fieldLabelText',
             title: 'Field Label',
-            type: 'string'
+            type: 'string',
+            validation: Rule => Rule.required(),
           },
 
         ]
