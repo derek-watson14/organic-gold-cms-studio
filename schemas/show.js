@@ -67,6 +67,7 @@ export default {
           ]
         }
       ],
+      validation: Rule => Rule.max(8),
     },
     {
       name: 'venue',
