@@ -4,13 +4,13 @@ export default {
   type: 'object',
   fields: [
     {
-      name: 'listName',
+      name: 'name',
       title: 'List Name',
       type: 'string',
       validation: Rule => Rule.required(),
     },
     {
-      name: 'listItem',
+      name: 'items',
       title: 'List Item',
       type: 'array',
       of: [
