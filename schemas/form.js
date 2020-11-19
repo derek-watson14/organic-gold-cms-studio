@@ -17,11 +17,11 @@ export default {
     },
     {
       name: 'fieldLabels',
-      title: 'Fields',
+      title: 'Field labels',
       type: 'array',
       of: [{
         name: 'label',
-        title: 'Field label',
+        title: 'Label',
         type: 'string',
       }],
     },
