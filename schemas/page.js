@@ -1,4 +1,5 @@
 import icon from 'react-icons/lib/fa/sitemap'
+import externalMedia from './externalMedia';
 
 export default {
   name: 'pages',
@@ -64,8 +65,28 @@ export default {
       }]
     },
     {
+      name: 'pageImage',
+      title: 'Page Image',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    },
+    {
+      name: 'externalMedia',
+      title: 'External Media',
+      description: 'All videos/music linked to the page from an external source.',
+      type: 'externalMedia',
+    },
+    {
+      name: 'lists',
+      title: 'Page lists',
+      type: 'array',
+      of: [{ type: 'list' }],
+    },
+    {
       name: 'buttonLinks',
-      title: 'Button Links',
+      title: 'Link Buttons',
       type: 'array',
       description: 'Button links that will appear on the page.',
       of: [{
@@ -89,25 +110,11 @@ export default {
       }]
     },
     {
-      name: 'pageImage',
-      title: 'Page Image',
-      type: 'image',
-      options: {
-        hotspot: true
-      }
-    },
-    {
-      name: 'lists',
-      title: 'Page lists',
-      type: 'array',
-      of: [{ type: 'list' }],
-    },
-    {
       name: 'forms',
       title: 'Forms',
       type: 'array',
       of: [{ type: 'form' }]
-    }
+    },
   ],
   preview: {
     select: {

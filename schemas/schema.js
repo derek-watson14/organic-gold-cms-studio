@@ -9,6 +9,7 @@ import show from './show'
 import list from './list'
 import form from './form'
 import address from './address'
+import externalMedia from './externalMedia'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -26,5 +27,6 @@ export default createSchema({
     list,
     form,
     address,
+    externalMedia,
   ])
 })
