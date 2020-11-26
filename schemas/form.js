@@ -16,7 +16,7 @@ export default {
       validation: Rule => Rule.required(),
     },
     {
-      name: 'fieldLabels',
+      name: 'labels',
       title: 'Field labels',
       type: 'array',
       of: [{
