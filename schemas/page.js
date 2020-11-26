@@ -75,7 +75,7 @@ export default {
     {
       name: 'externalMedia',
       title: 'External Media',
-      description: 'All videos/music linked to the page from an external source.',
+      description: "All videos/music linked to the page from an external source. Media will only appear if it's programmed to be on the page.",
       type: 'externalMedia',
     },
     {

@@ -4,13 +4,13 @@ export default {
   type: 'object',
   fields: [
     {
-      name: 'formName',
+      name: 'name',
       title: 'Form Name',
       type: 'string',
       validation: Rule => Rule.required(),
     },
     {
-      name: 'formHeader',
+      name: 'header',
       title: 'Form header',
       type: 'string',
       validation: Rule => Rule.required(),
