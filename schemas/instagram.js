@@ -1,5 +1,5 @@
 export default {
-  name: 'instagramData',
+  name: 'instagram',
   title: 'Instagram info',
   description: 'Instagram username, profile link, title, and post display count.',
   type: 'object',
