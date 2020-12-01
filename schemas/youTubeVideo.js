@@ -12,9 +12,16 @@ export default {
     },
     {
       name: 'link',
-      title: 'Link',
+      title: 'Video link',
       description:
         'URL link to video. To get link click Share > Embed then copy only the URL following src= (do not include parenthesis).',
+      type: 'string',
+    },
+    {
+      name: 'channel',
+      title: 'Channel link',
+      description:
+        'URL link to channel. Can be copy/pasted from channel page. Serves as link from header click.',
       type: 'string',
     },
   ],

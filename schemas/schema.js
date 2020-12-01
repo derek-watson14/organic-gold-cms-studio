@@ -12,6 +12,7 @@ import band from './band'
 import venue from './venue'
 import scPlayer from './scPlayer'
 import youTubeVideo from './youTubeVideo'
+import instagram from './instagram'
 
 export default createSchema({
   name: 'default',
@@ -31,5 +32,6 @@ export default createSchema({
     venue,
     scPlayer,
     youTubeVideo,
+    instagram,
   ]),
 })

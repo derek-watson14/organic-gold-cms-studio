@@ -16,6 +16,12 @@ export default {
       description: 'URL link to a user page or playlist to populate the player.',
       type: 'string',
     },
+    {
+      name: 'user',
+      title: 'User link',
+      description: 'URL link to a user page. Serves as link from header click.',
+      type: 'string',
+    },
   ],
   options: {
     collapsible: true,

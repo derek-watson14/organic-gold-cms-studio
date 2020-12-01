@@ -16,6 +16,12 @@ export default {
       type: 'scPlayer',
     },
     {
+      name: 'instagram',
+      title: 'Instagram info',
+      description: 'Instagram username, profile link, title, and post display count.',
+      type: 'instagram',
+    },
+    {
       name: 'scSongList',
       title: 'SoundCloud song list',
       description: 'List of SoundCloud songs to be displayed one by one.',
