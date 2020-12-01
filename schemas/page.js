@@ -1,5 +1,4 @@
 import icon from 'react-icons/lib/fa/sitemap'
-import externalMedia from './externalMedia';
 
 export default {
   name: 'pages',
@@ -8,14 +7,13 @@ export default {
   icon,
   fieldsets: [
     {
-      name: "meta",
-      title: "Page metadata",
+      name: 'meta',
+      title: 'Page metadata',
       options: {
         collapsible: true,
         collapsed: true,
-      }
+      },
     },
-
   ],
   fields: [
     {
@@ -24,7 +22,7 @@ export default {
       type: 'string',
       description: 'Changing will break website. This is how the website identifies the page.',
       fieldset: 'meta',
-      validation: Rule => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'tabTitle',
@@ -32,7 +30,7 @@ export default {
       type: 'string',
       description: 'Text that will render on the browser tab.',
       fieldset: 'meta',
-      validation: Rule => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'metaDescription',
@@ -40,13 +38,13 @@ export default {
       type: 'string',
       description: 'Description for search result and SEO.',
       fieldset: 'meta',
-      validation: Rule => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'pageHeader',
       title: 'Page Header',
       type: 'string',
-      validation: Rule => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'subheader',
@@ -59,23 +57,26 @@ export default {
       title: 'Text Content',
       type: 'array',
       description: 'Main text for the page. Each section represents a paragraph.',
-      of: [{
-        type: 'text',
-        rows: 4,
-      }]
+      of: [
+        {
+          type: 'text',
+          rows: 4,
+        },
+      ],
     },
     {
       name: 'pageImage',
       title: 'Page Image',
       type: 'image',
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
     {
       name: 'externalMedia',
       title: 'External Media',
-      description: "All videos/music linked to the page from an external source. Media will only appear if it's programmed to be on the page.",
+      description:
+        "All videos/music linked to the page from an external source. Media will only appear if it's programmed to be on the page.",
       type: 'externalMedia',
     },
     {
@@ -85,49 +86,31 @@ export default {
       of: [{ type: 'list' }],
     },
     {
-      name: 'buttonLinks',
-      title: 'Link Buttons',
+      name: 'buttonLinkList',
+      title: 'Internal Navigation Buttons',
       type: 'array',
-      description: 'Button links that will appear on the page.',
-      of: [{
-        name: 'button',
-        title: 'Link Button',
-        type: 'object',
-        fields: [
-          {
-            name: 'buttonText',
-            title: 'Button display text:',
-            type: 'string',
-            description: 'Case insensitive, will be transformed to all uppercase.'
-          },
-          {
-            name: 'toPage',
-            title: 'Links to this page:',
-            type: 'string',
-            description: 'Changing this will change where the button directs to. Please use a page name in all lowercase, found under page metadata section.'
-          }
-        ]
-      }]
+      description: 'Buttons that act as links to other pages.',
+      of: [{ type: 'buttonLink' }],
     },
     {
       name: 'forms',
       title: 'Forms',
       type: 'array',
-      of: [{ type: 'form' }]
+      of: [{ type: 'form' }],
     },
   ],
   preview: {
     select: {
       page: 'pageName',
-      description: 'metaDescription'
+      description: 'metaDescription',
     },
     prepare(selection) {
-      const { page, description } = selection;
+      const { page, description } = selection
 
       return {
         title: page,
         subtitle: description,
       }
-    }
-  }
+    },
+  },
 }

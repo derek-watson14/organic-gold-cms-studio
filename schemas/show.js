@@ -11,7 +11,7 @@ export default {
       title: 'Show Name',
       type: 'string',
       description: 'Name of the show to be displayed on page.',
-      validation: Rule => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'about',
@@ -19,7 +19,7 @@ export default {
       type: 'text',
       rows: 2,
       description: 'Short description of the show.',
-      validation: Rule => Rule.required().max(280)
+      validation: (Rule) => Rule.required().max(280),
     },
     {
       name: 'showDate',
@@ -28,69 +28,30 @@ export default {
       options: {
         dateFormat: 'dddd, D MMMM YYYY',
       },
-      validation: Rule => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'showTime',
       title: 'Show Time:',
       description: 'Format time like one of the following examples: 5:15pm, 11:20am',
       type: 'string',
-      validation: Rule => {
-        return Rule
-          .required()
+      validation: (Rule) => {
+        return Rule.required()
           .regex(/\b((1[0-2]|0?[1-9]):([0-5][0-9])([ap][m]))/)
-          .error("Time format must match format in description. (1:10am, 10:55pm)")
+          .error('Time format must match format in description. (1:10am, 10:55pm)')
       },
     },
     {
       name: 'bands',
       title: 'Bands playing:',
       type: 'array',
-      of: [
-        {
-          name: 'band',
-          title: 'Band Info:',
-          type: 'object',
-          fields: [
-            {
-              name: 'name',
-              title: 'Band name:',
-              type: 'string',
-              validation: Rule => Rule.required(),
-            },
-            {
-              name: 'link',
-              title: 'Band webpage link:',
-              type: 'string',
-              description: "The band's website/Spotify/Facebook etc.",
-            },
-          ]
-        }
-      ],
-      validation: Rule => Rule.max(8),
+      of: [{ type: 'band' }],
+      validation: (Rule) => Rule.max(8),
     },
     {
       name: 'venue',
-      title: 'Venue Info:',
-      type: 'object',
-      fields: [
-        {
-          name: 'name',
-          title: 'Venue name:',
-          type: 'string',
-          validation: Rule => Rule.required(),
-        },
-        {
-          name: 'link',
-          title: 'Link to venue',
-          type: 'string',
-        },
-        {
-          name: 'address',
-          title: 'Venue address',
-          type: 'address',
-        }
-      ]
+      title: 'Venue Info',
+      type: 'venue',
     },
     {
       name: 'image',
@@ -99,7 +60,7 @@ export default {
       type: 'image',
       options: {
         hotspot: true,
-      }
+      },
     },
   ],
   preview: {
@@ -108,11 +69,11 @@ export default {
       description: 'about',
     },
     prepare(selection) {
-      const {showName, description} = selection;
+      const { showName, description } = selection
       return {
         title: showName,
         subtitle: description,
       }
-    }
-  }
+    },
+  },
 }
