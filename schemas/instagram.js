@@ -22,7 +22,16 @@ export default {
       title: 'Number of posts to display.',
       description:
         'Number of posts to display. Value must be a multiple of six between 6 and 18 (ie. 6, 12, 18).',
-      type: 'string',
+      type: 'number',
+      validation: (Rule) =>
+        Rule.custom((number) => {
+          const num = Number(number)
+          if (num % 6 === 0 && num >= 6 && num <= 18) {
+            return true
+          } else {
+            return 'Post count must be 6, 12 or 18.'
+          }
+        }),
     },
   ],
   options: {
