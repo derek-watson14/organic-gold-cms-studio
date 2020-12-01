@@ -5,6 +5,12 @@ export default {
   title: 'Shows',
   type: 'document',
   icon,
+  fieldsets: [
+    {
+      name: 'image',
+      title: 'Show image data',
+    },
+  ],
   fields: [
     {
       name: 'name',
@@ -58,9 +64,18 @@ export default {
       title: 'Show image/poster:',
       description: 'Optional poster or image for the show card',
       type: 'image',
+      fieldset: 'image',
       options: {
         hotspot: true,
       },
+    },
+    {
+      name: 'imageAlt',
+      title: 'Image caption',
+      description: 'Caption for screenreaders or if image fails to load',
+      type: 'string',
+      fieldset: 'image',
+      validation: (Rule) => Rule.max(140),
     },
   ],
   preview: {

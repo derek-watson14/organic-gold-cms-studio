@@ -14,6 +14,10 @@ export default {
         collapsed: true,
       },
     },
+    {
+      name: 'image',
+      title: 'Page image data',
+    },
   ],
   fields: [
     {
@@ -66,11 +70,21 @@ export default {
     },
     {
       name: 'pageImage',
-      title: 'Page Image',
+      title: 'Image',
+      description: 'Main display image for pages with an image',
       type: 'image',
+      fieldset: 'image',
       options: {
         hotspot: true,
       },
+    },
+    {
+      name: 'pageImageAlt',
+      title: 'Image caption',
+      description: 'Caption for screenreaders or if image fails to load',
+      type: 'string',
+      fieldset: 'image',
+      validation: (Rule) => Rule.max(140),
     },
     {
       name: 'externalMedia',
