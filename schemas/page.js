@@ -21,30 +21,6 @@ export default {
   ],
   fields: [
     {
-      name: 'pageName',
-      title: 'Page Name',
-      type: 'string',
-      description: 'Changing will break website. This is how the website identifies the page.',
-      fieldset: 'meta',
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: 'tabTitle',
-      title: 'Tab Title',
-      type: 'string',
-      description: 'Text that will render on the browser tab.',
-      fieldset: 'meta',
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: 'metaDescription',
-      title: 'SEO Description',
-      type: 'string',
-      description: 'Description for search result and SEO.',
-      fieldset: 'meta',
-      validation: (Rule) => Rule.required(),
-    },
-    {
       name: 'pageHeader',
       title: 'Page Header',
       type: 'string',
@@ -111,6 +87,14 @@ export default {
       title: 'Forms',
       type: 'array',
       of: [{ type: 'form' }],
+    },
+    {
+      name: 'pageName',
+      title: 'Page Name',
+      type: 'string',
+      description: 'Changing will break website. This is how the website identifies the page.',
+      fieldset: 'meta',
+      validation: (Rule) => Rule.required(),
     },
   ],
   preview: {
