@@ -100,14 +100,12 @@ export default {
   preview: {
     select: {
       page: 'pageName',
-      description: 'metaDescription',
     },
     prepare(selection) {
-      const { page, description } = selection
+      const { page } = selection
 
       return {
         title: page,
-        subtitle: description,
       }
     },
   },
