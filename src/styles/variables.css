@@ -11,16 +11,16 @@
 :root {
   /* Brand colors */
   
-  /* --brand-primary: var(--brand-primary); */
+  --brand-primary: #662E43;
   --brand-primary--inverted: #ffffff;
-  --brand-secondary: #ffa800;
-  --brand-secondary--inverted: #3c1609;
+  --brand-secondary: #EB9F87;
+  --brand-secondary--inverted: #1B1C1D;
  
   /* Typography */
   
   --font-family-sans-serif: 'Nunito';
   --font-size-base: 16px;
-  /* --text-color: var(--brand-secondary--inverted); */
+  --text-color: var(--brand-secondary--inverted);
  
   /* Main Navigation */
   

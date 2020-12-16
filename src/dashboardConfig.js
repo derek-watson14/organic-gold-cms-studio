@@ -8,9 +8,12 @@ export default {
           {
             name: 'netlify',
             options: {
-              title: 'Re-deploy Organic Gold website',
-              description: `After publishing edits to page or show, the site needs to be redeployed for the changes to go live. 
-                The deployment processs can take up to a few minutes. Netlify is where the site is deployed.`,
+              title: 'Go Live! Deploy Changes Here',
+              description: `
+                After publishing edits to a page or show, the site needs to be redeployed for the changes to go live. 
+                Click the "Deploy" button on the right below to make the changes live.
+                The deployment processs can take up to a few minutes. 
+                Netlify is where the site is deployed.`,
               sites: [
                 {
                   buildHookId: '5fda5c6781b6d61db1976c49',
@@ -26,12 +29,12 @@ export default {
           {
             title: 'Website repo',
             value: 'https://github.com/derek-watson14/organic-gold',
-            category: 'Code',
+            category: 'code',
           },
           {
             title: 'CMS repo',
             value: 'https://github.com/derek-watson14/organic-gold-cms-studio',
-            category: 'Code',
+            category: 'code',
           },
           {
             title: 'Website',
