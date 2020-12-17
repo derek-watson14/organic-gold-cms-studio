@@ -47,7 +47,7 @@ export default {
     {
       name: 'pageImage',
       title: 'Image',
-      description: 'Main display image for pages with an image',
+      description: 'The main display image for pages that have an image.',
       type: 'image',
       fieldset: 'image',
       options: {
@@ -72,8 +72,16 @@ export default {
     {
       name: 'lists',
       title: 'Page lists',
+      description: 'Lists of information for this page (ie. contact info, equipment, etc).',
       type: 'array',
       of: [{ type: 'list' }],
+    },
+    {
+      name: 'forms',
+      title: 'Forms',
+      description: 'The labels and headers for any forms on the page.',
+      type: 'array',
+      of: [{ type: 'form' }],
     },
     {
       name: 'buttonLinkList',
@@ -81,12 +89,6 @@ export default {
       type: 'array',
       description: 'Buttons that act as links to other pages.',
       of: [{ type: 'buttonLink' }],
-    },
-    {
-      name: 'forms',
-      title: 'Forms',
-      type: 'array',
-      of: [{ type: 'form' }],
     },
     {
       name: 'pageName',

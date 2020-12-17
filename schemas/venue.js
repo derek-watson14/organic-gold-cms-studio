@@ -11,12 +11,14 @@ export default {
     },
     {
       name: 'link',
-      title: 'Link to venue',
+      title: "Venue link",
+      description: "Link to venue's website, Facebook page, etc.",
       type: 'string',
     },
     {
       name: 'address',
       title: 'Venue address',
+      description: "Help people easily find the show's location.", 
       type: 'address',
     },
   ],

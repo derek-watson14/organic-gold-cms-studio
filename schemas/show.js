@@ -50,6 +50,7 @@ export default {
     {
       name: 'bands',
       title: 'Bands playing:',
+      description: 'A list of up to 8 bands playing the event. If blank, "TBD" will be displayed for the bands.',
       type: 'array',
       of: [{ type: 'band' }],
       validation: (Rule) => Rule.max(8),
@@ -57,12 +58,13 @@ export default {
     {
       name: 'venue',
       title: 'Venue Info',
+      description: 'If this section is incomplete, "TBD" will be displayed on the page for the venue.', 
       type: 'venue',
     },
     {
       name: 'image',
       title: 'Show image/poster:',
-      description: 'Optional poster or image for the show card',
+      description: 'Optional poster or image for the show card. A default image will appear if none is provided here.',
       type: 'image',
       fieldset: 'image',
       options: {

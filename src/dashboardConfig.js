@@ -11,9 +11,9 @@ export default {
               title: 'Go Live! Deploy Changes Here',
               description: `
                 After publishing edits to a page or show, the site needs to be redeployed for the changes to go live. 
-                Click the "Deploy" button on the right below to make the changes live.
-                The deployment processs can take up to a few minutes. 
-                Netlify is where the site is deployed.`,
+                Click the "Deploy" button on the right side below to make the changes live.
+                The deployment processs will take up to a few minutes, after which the changes will be visible on the site. 
+                Note: Netlify is where the site is hosted and deployed.`,
               sites: [
                 {
                   buildHookId: '5fda5c6781b6d61db1976c49',
