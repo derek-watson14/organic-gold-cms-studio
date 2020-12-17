@@ -5,7 +5,7 @@
 
 /* Custom fonts */
 
-  @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
 
 :root {
@@ -13,7 +13,7 @@
   
   --brand-primary: #662E43;
   --brand-primary--inverted: #ffffff;
-  --brand-secondary: #EB9F87;
+  --brand-secondary: #26759F;
   --brand-secondary--inverted: #1B1C1D;
  
   /* Typography */
@@ -25,6 +25,6 @@
   /* Main Navigation */
   
   --main-navigation-color: var(--brand-secondary);
-  --main-navigation-color--inverted: var(--brand-secondary--inverted);
+  --main-navigation-color--inverted: var(--brand-primary--inverted);
  
 }
