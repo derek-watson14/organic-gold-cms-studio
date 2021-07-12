@@ -1,4 +1,4 @@
-import icon from 'react-icons/lib/fa/sitemap'
+import icon from 'react-icons/lib/fa/file-code-o'
 
 export default {
   name: 'pages',
